@@ -129,9 +129,9 @@ const userConfig: HardhatUserConfig = {
   mocha: {
     timeout: 2000000,
   },
-  etherscan: {
-    apiKey: ETHERSCAN_API_KEY,
-  },
+  // etherscan: {
+  //   apiKey: ETHERSCAN_API_KEY,
+  // },
 };
 if (NODE_URL) {
   userConfig.networks!!.custom = {

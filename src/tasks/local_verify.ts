@@ -40,6 +40,9 @@ task("local-verify", "Verifies that the local deployment files correspond to the
                 const onchainBytecodeHash = hre.ethers.utils.keccak256(onChainCode)
                 const localBytecodeHash = hre.ethers.utils.keccak256(`0x${compiledContract.evm.deployedBytecode.object}`)
                 const verifySuccess = onchainBytecodeHash === localBytecodeHash ? "SUCCESS" : "FAILURE"
+                
+                console.log(`Verification onchainBytecodeHash: ${onchainBytecodeHash}`)
+                console.log(`Verification localBytecodeHash: ${localBytecodeHash}`)
                 console.log(`Verification status for ${value}: ${verifySuccess}`)
             }
         }
